@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style>
+      #body {
+        padding: 20px;
+
+        height: 250px;
+        width: 250px;
+       border-top: 50px;
+        margin: auto;
+        
+        border: solid black;
+       
+        background-color: rgb(59, 55, 55);
+      }
+
+      #clear {
+        color: rgb(224, 17, 17);
+      }
+     .calci{
+      align-self: center;
+      
+      flex-direction: column;
+      justify-content: center;
+     
+      size:40px;
+      
+     }
+      #head{
+      
+       text-align: center;
+       color: rgb(240, 13, 13);
+       font-size: 30px;
+      }
+        
+      
+    </style>
+  </head>
+  <body>
+    <h4 id="head">This is a sample calculator</h4>
+    <table id="body">
+      <tr colspan="4" id="display">
+        <td>
+          <input type="text" name="display" id="display" />
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <input id="clear" type="button" value="C" class="calci"/>
+          <input  type="button" value="+" class="calci"/>
+          <input type="button" value="-" class="calci"/>
+
+          <input type="button" value="*" class="calci"/>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <input type="button" value="1" class="calci"/>
+          <input type="button" value="2" class="calci"/>
+          <input type="button" value="3" class="calci"/>
+          <input type="button" value="/" class="calci"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="button" value="4" class="calci"/>
+          <input type="button" value="5" class="calci"/>
+          <input type="button" value="6" class="calci"/>
+          <input type="button" value="%" class="calci"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="button" value="7" class="calci"/>
+          <input type="button" value="8" class="calci"/>
+          <input type="button" value="9" class="calci"/>
+          <input type="button" value="0" class="calci"/>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
