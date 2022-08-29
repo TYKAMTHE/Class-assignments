@@ -1,409 +1,621 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <title>dummy_website</title>
 
-  <title>Hello, world!</title>
+    <style>
+        /* .firstNavbar */
+      .firstNavbar {
+        background-color:white;
+        display: flex;
+        font-size: 12px;
+         margin: 0px;
+         padding: 0px ;
+         height: 25px;
+        
+      }
+      .firstNavbar ul a{
+        text-decoration: none;
+        color: black;
+      }
+      .firstNavbar1 ul{
+        margin: 2px 0px 2px 2px;
+        padding: 2px 0px 2px 2px;
+        list-style: none;
+        float: left;
+     
+      }
+      .firstNavbar2 ul{
+        padding: 2px 4px 2px 2px;
+        list-style: none; 
+        float: right;
+       
+      }
+      .firstNavbar1{
+        margin-left: 130px;
+        text-decoration: none;
+        
+      }
+      .firstNavbar2{
+        float: right;
+        margin-left: 650px;
+       
+      }
+/* .secondNavbar */
+      .secondNavbar{
+        background-color:rgb(15, 15, 179);
+        display: flex;
+        font-size: 14px;
+         margin: 0px;
+         padding: 5px;
+         height: 40px;
+         color: white;
+         position: relative; 
+      }
+      .secondNavbar ul a{
+        color: white;
+        text-decoration: none;
+      
+      }
+      
+      .secondNavbar1 ul{
+        list-style: none;
+        float: left;
+        margin: 2px 2px 2px 2px;      
+      }
+      .secondNavbar2 ul{
+        list-style: none; 
+        float: right;
+        margin: 2px 2px 2px 2px; 
+      }
+     .secondNavbar1{
+        margin-left: 100px;
+       
+      }
+      .secondNavbar2{
+        float: right;
+        margin-left: 380px;
+       
+      }
+      .secondNavbar3{
+        display:inline-block;
+        font-size: 20px;
+       
+     padding-bottom: 20px;
+       font-weight:bolder;
+      }
+/* Hover */
+.secondNavbar ul a:hover{
+  color: aqua;
+}
 
-</head>
+.secondNavbar>ul>a{
+        color: aqua;
+      
+      }
+      .secondNavbar>ul>li a{
+color: white;
+text-decoration: none;
+      }
+      .megamenu{
+        top:120%;
+        left:0px;
+        position:absolute;
+        width:100%;
+        opacity: 0;
+        visibility: hidden;
+        flex-wrap: wrap;
+        height: 300px;
+        transition: 2s;
+        box-shadow:0px 10px 2px 3px lightblue;
+display: flex;
+      }
+      nav>ul>li:hover.megamenu{
+        opacity: 1;
+        top:100%;
+        visibility: visible;
+      }
+      .megamenuItems{
+        flex-basis: 31%;
+        padding: 1%;
+      }
+.megamenuItems ul li{
+list-style: none;
+padding: 7px;
+}
+.megamenuItems h3{
+  padding: 10px;
+  background: lightgray;
 
-<style>
-  .fluidOne {
-    display: flex;
-    justify-content: space-between;
+}
 
-  }
-
-  .navContent {
-    font-size: small;
-    margin: 0px 50px;
-    text-decoration: none;
-    font-size: 9px;
-  }
-
-  .navContent a {
-    color: black;
-    margin: 0px;
-
-  }
-
-  .secondNav {
-    background-color: rgb(11, 11, 211);
-    display: flex;
-    justify-content: space-between;
-    height: 60px;
-    position: relative;
-   
-  }
-
-  .secondNav .navbar-brand {
-
-    display: inline-block;
-    color: white;
-    font-size: 15px;
-    margin: 30px;
-    margin-top: 20px;
-    margin-left: 70px;
-
-
-  }
-
-  .navbar-brand.secondnavIcon {
-    display: inline;
-    color: rgb(247, 236, 236);
-    font-weight: 600;
-    font-size: 50px;
-    margin-left: 80px;
-
-  }
+/* image */
 
 
-  .imgDiv {
-    height: auto;
-    position: relative;
-    width: 100%;
-    display: block;
-    top: 0;
-  }
-
-  .imgDiv img {
-    width: 100%;
-    display: block;
-  }
-
-  .imgContent1 {
-    position: absolute;
+    
+    .imgFirstContent1 {
+        position: absolute;
     left: 154px;
-    top: 100px;
-    font-size: 50px;
-    color: aliceblue;
-  }
-
-  .imgContent2 {
-    position: absolute;
-    left: 154px;
-    top: 270px;
-    font-size: 30px;
-    color: aliceblue;
-  }
-
-  .fixed-bottom {
-    top: 50%;
-    left: 91%;
-
-  }
-
-  .feedbackBtn:hover {
-    background-color: rgb(11, 11, 211);
-  }
-
-  .imgSecond img {
-    height: 500px;
-    width: 100%;
-    display: block;
-
-  }
-
-
-
-  .imgSecond {
-    left: 154px;
-    top: 200px;
+    top: 160px;
     font-size: 40px;
     color: aliceblue;
-  }
-
-  .imgContent3 {
-    position: absolute;
-    left: 150px;
-    top: 650px;
-    font-size: 30px;
-    color: rgb(16, 115, 201);
-  }
-
-  .imgContent4 {
+    font-weight: 500;
+    }
+    .imgFirstContent2{
+        position: absolute;
+    left: 154px;
+    top: 300px;
+    font-size: 17px;
+    color: aliceblue;  
+    }
+    .imgFirstButton3{
     position: absolute;
     left: 154px;
-    top: 750px;
-    font-size: 15px;
-    color: rgb(16, 115, 201);
-  }
-
-  .preOrder {
-    position: relative;
-    color: aliceblue;
-    width: 200px;
-    height: 40px;
-  }
-
-  * {
-    margin: 0px;
-    padding: 0px;
-  }
+    top: 370px;
+    font-size: 10px;
+    color: white;
+    width: 300px; 
+    height: 10px;
+    color:aqua;
+    font-style: none;
+}
   
-   nav>ul>li:hover.megamenuitems{
-   opacity: 1;
-   visibility: visible;
-   top: 100%;
- }
-  .megamenu{
-    position: absolute;
-    top: 120%;
-    left: 0;
-    width: 100%;
-    opacity: 0px;
-visibility: hidden;
-    height: 300px;
-    box-shadow: 0px 10px 3px rgb(70, 83, 87);
-    transition: 2s;
-    display: flex;
-    flex-wrap:wrap ;
+.fixed-bottom {
+    top: 50%;
+    left: 76%;
+   
+    transform: rotate(90deg);
+}
+.feedbackBtn{
+    background-color: rgb(157, 152, 146);
+}
+
+.feedbackBtn:hover {
+    background-color:aqua;
   }
-
-
-  .megamenuitems ul li {
-    list-style: none;
-    padding: 10px;
-    background-color: azure;
+  .bi-basket3{
+    background-color:rgb(15, 15, 179);
+    color: white;
+    padding: 2px;
+    font-size: 12px;
   }
-  .megamenuitems{
-    flex-basis: 25%;
-    margin: 1%;
-  }
-  .megamenuitems h3{
-    padding: 10px;
-  }
-
-  .custom-shape-divider-bottom-1661161516 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.custom-shape-divider-bottom-1661161516 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 69px;
-}
-
-.custom-shape-divider-bottom-1661161516 .shape-fill {
-    fill: #F5F0F0;
-}
-
-.alert-dismissible{
- 
-  background-color: blue;
-}
-.btn-close{
-
-}
-.alert{
+  .alert{
   margin-bottom: 0;
   margin-bottom: 0;
     height: 10px;
-    font-size: 10px;
+    font-size: 12px;
    background-color: aquamarine;
     display: flex;
     align-items: center;
-   
-    padding-left: 10%;
+   padding-left: 10%;
+ 
 }
-</style>
+.alert-dismissible{
+ 
+ background-color:aqua;
+}
+.btn-close{
+ height: 0px;
+    font-size: 12px;
+    display: inline-block;
+    align-items: center;
+   padding-left: 10%;
+}
+.imgSecond{
 
-<body>
-  <!-- As a link --> 
-  <nav class="navbar navbar-light bg-light fluidOne">
-    <div class="container-fluid">
-      <div class="container ">
-        <div class="row navContent ">
-          <div class="col ">
-            <a href="#"> Personal | Business</a>
+}
+.imgSecondContent1{
+    position: absolute;
+    left: 154px;
+    top: 700px;
+    font-size: 40px;
+    color: rgb(14, 17, 105);
+    font-weight: 500; 
+}
+.imgSecondContent2{
+    position: absolute;
+    left: 154px;
+    top: 850px;
+    font-size: 20px;
+    color: rgb(58, 20, 11);
+      
+}
+/* footer */
+.footer{
+  
+width: 100%;
+}
+.footerStrip{
+  background-color:rgb(12, 201, 201);
+    font-size: 12px;
+    height: 37px;
+    /* display: flex; */
+    justify-content: center;
+    padding-top: 10px;
+    width: 100%;
+  }
+  .footerStripContent{
+    margin-left: 120px;
+  }
+
+.footerStrip a {
+ font-weight: bolder;
+ color: black;
+ width: 100%;
+ padding: 5px;
+}
+.footerImg{
+  margin-top: 0px;
+  width: 100%;
+}
+.footerRow{
+  position: absolute;
+  left: 154px;
+    top: 1200px;
+    font-size: 17px; 
+    color: rgb(235, 235, 245);
+    
+  }
+  .col a  {
+    text-decoration: none;
+    color:white;
+  }
+  .listType li{
+  list-style-type: none;
+  font-size: 12px;
+}
+.disclaimer{
+  width: 100%;
+}
+.disclaimerOne{
+  display: flex;
+  position: absolute;
+  left: 154px;
+    top: 1500px;
+    font-size: 10px; 
+    color: rgb(235, 235, 245);
+    list-style-type: none;
+
+   
+}
+.disclaimerOne li{
+  padding: 8px;
+}
+.disclaimerTwo{
+  display: flex;
+  position: absolute;
+  left: 154px;
+    top: 1530px;
+    font-size: 10px; 
+    color: rgb(235, 235, 245);
+    list-style-type: none;
+
+   
+}
+.disclaimerTwo li{
+  padding: 8px;
+}
+.disclaimerThree{
+  display: flex;
+  position: absolute;
+  left: 154px;
+    top: 1560px;
+    font-size: 10px; 
+    color: rgb(235, 235, 245);
+    list-style-type: none;
+
+}
+.disclaimerThree li{
+padding: 8px;
+}
+.disclaimerFour{
+  display: flex;
+  position: absolute;
+  left: 154px;
+    top: 1590px;
+    font-size: 10px; 
+    color: rgb(235, 235, 245);
+    list-style-type: none;
+
+}
+.disclaimerFour li{
+  padding: 8px;
+}
+.secondNavbarIcon{
+  position: relative;
+  padding-bottom: 1px;
+  /* right: 10px; */
+  top: -15px;
+  font-size: 30px;
+
+ margin-bottom: 2px;
+}
+  </style>
+  </head>
+  <body>
+    <!-- firstNavbar -->
+    
+    <div class="firstNavbar">
+      <div class="firstNavbar1">
+        <ul>
+          <li><a href="#"> Personal</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">Business</a> </li>
+        </ul>
+      </div>
+<br>
+
+      <div class="firstNavbar2">
+        <ul>
+          <li><a href="#"> Register</a></li>
+        </ul>
+        <ul>
+          <li><a href="#"> Sign in</a></li>
+        </ul>
+      </div>
+    </div>
+<!-- secondNavbar -->
+    <div class="secondNavbar">
+<div class="secondNavbar1">
+    <ul class="secondNavbar3">
+        <li class="secondNavbarIcon"> <a href="#"> O <sub>2</sub></a></li>
+      </ul>
+      <ul>
+        <li> <a href="">Shop</a>
+         <div class="megamenu">
+          <div class="megamenuItems">
+            <h3>Phones</h3>
+            <ul>
+              <li> Phones</li>
+              <li>Upgrades</li>
+              <li>Apple iPhone</li>
+              <li>Samsung Galaxy Z Fold4</li>
+              <li>Android phones</li>
+              <li>Refurbished phones</li>
+            </ul>
+          </div> 
+          <div class="megamenuItems">
+            <h3>Phones</h3>
+            <ul>
+              <li> Phones</li>
+              <li>Upgrades</li>
+              <li>Apple iPhone</li>
+              <li>Samsung Galaxy Z Fold4</li>
+              <li>Android phones</li>
+              <li>Refurbished phones</li>
+            </ul>
+          </div> 
+          <div class="megamenuItems">
+            <h3>Phones</h3>
+            <ul>
+              <li> Phones</li>
+              <li>Upgrades</li>
+              <li>Apple iPhone</li>
+              <li>Samsung Galaxy Z Fold4</li>
+              <li>Android phones</li>
+              <li>Refurbished phones</li>
+            </ul>
+          </div> 
+          <div class="megamenuItems">
+            <h3>Phones</h3>
+            <ul>
+              <li> Phones</li>
+              <li>Upgrades</li>
+              <li>Apple iPhone</li>
+              <li>Samsung Galaxy Z Fold4</li>
+              <li>Android phones</li>
+              <li>Refurbished phones</li>
+            </ul>
+          </div> 
+          <div class="megamenuItems">
+            <h3>Phones</h3>
+            <ul>
+              <li> Phones</li>
+              <li>Upgrades</li>
+              <li>Apple iPhone</li>
+              <li>Samsung Galaxy Z Fold4</li>
+              <li>Android phones</li>
+              <li>Refurbished phones</li>
+            </ul>
+          </div> 
+         </div>
+        </li>
+      </ul>
+      <ul>
+        <li> <a href="">Why O2</a> </li>
+      </ul>
+      <ul>
+        <li> <a href="">Help</a> </li>
+      </ul>
+</div>
+<div class="secondNavbar2">
+    <ul>
+        <li>  <a class="navbar-brand firstNavbar " aria-current="page" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+            height="16" fill="currentColor" class="bi bi-basket3 firstNavbar " viewBox="0 0 16 16">
+            <path
+              d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM3.394 15l-1.48-6h-.97l1.525 6.426a.75.75 0 0 0 .729.574h9.606a.75.75 0 0 0 .73-.574L15.056 9h-.972l-1.479 6h-9.21z" />
+          </svg></a></li>
+      </ul>
+      <ul>
+        <li> <a class="navbar-brand  bi bi-basket3  firstNavbar" aria-current="page" href="#"> <svg xmlns="http://www.w3.org/2000/svg"
+            width="16" height="16" fill="currentColor" class="bi bi-search  " viewBox="0 0 16 16">
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+          </svg> Search </a></li>
+      </ul>
+      <ul>
+        <li> <a href=""> My O2</a></li>
+      </ul>
+</div>
+    </div>
+    <div class="fixed-bottom"><button type="button" class="btn btn-light feedbackBtn">Feedback</button></div>
+
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        Want to chat before you buy? Call us from 8am to 8pm on 0808 002 0202.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        
+        <!-- imgFirst -->
+        
+        
+        <div class="imgFirst">
+            <img src="./images/backg.jpg" alt="background-img" width="100%" height="500px">
+            <div class="imgFirstContent1">
+   
+                Discover <br>
+                O2 Switch Up  
+            </div>
+            
+            <div class="imgFirstContent2">
+                
+                
+                Switch to a new phone whenever you like, <br>
+                with no extra charges.
+            </div>
+            <div class="imgFirstButton3">
+                <!-- <button class="imgFirstButton3_button">Learn more</button> -->
+                <button type="button" class="btn btn-light btn-outline-primary imgFirstButton3_button">Learn more</button>
+            </div>
+        </div>
+    </div> 
+    <!-- imgSecond -->
+    <div class=".imgSecond ">
+        <div class="row">
+          <div class="col">
+            <div class="imgSecondContent1">
+   
+                Meet the new  <br>
+                Galaxy Z Fold4 
+            </div>
+            <div class="imgSecondContent2">
+                       
+              
+                Save up to $620 when you pre-order on an <br>
+                unlimited tariff and trade in a Galaxy device.
+             </div>
           </div>
-          <div class="col-6"></div>
-          <div class="col ">
-            <a href="#">Sign in or Register</a>
+          <div class="col">
+            <img src="./images/csm_EDIT9495_7928adc06e.jpg" alt="" width="100%" height="500px">
           </div>
         </div>
-      </div>
-    </div>
-  </nav>
-  
-  
-
-  <!-- secondNav -->
-  <nav class="navbar navbar-expand-lg navbar-light secondNav  ">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse " id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0  ">
-          <li class="nav-item ">
-            <a class="navbar-brand secondnavIcon " href="#">O <sub>2</sub></a>
-          </li>
-          <li class="nav-item">
-            <a class="  navbar-brand" aria-current="page" href="#">Shop</a>
-            <div class="megamenu">
-              <div class="megamenuitems">
-                <h1>Phones</h1>
-                <ul>
-
-                  <li> <a href="#">Phones</a> </li>
-                  <li> <a href="#"> Upgrades</a> </li>
-                  <li> <a href="#">Apple iPhone</a> </li>
-                  <li> <a href="#">Samsung Galaxy Z Fold4</a> </li>
-                  <li> <a href="#">Samsung Galaxy Z Fold4 x</a> </li>
-                  <li> <a href="#">Refurbished phones</a> </li>
-                </ul>
-              </div>
-              <div class="megamenuitems">
-                <h1>Phones</h1>
-                <ul>
-
-                  <li> <a href="#">Phones</a> </li>
-                  <li> <a href="#"> Upgrades</a> </li>
-                  <li> <a href="#">Apple iPhone</a> </li>
-                  <li> <a href="#">Samsung Galaxy Z Fold4</a> </li>
-                  <li> <a href="#">Samsung Galaxy Z Fold4 x</a> </li>
-                  <li> <a href="#">Refurbished phones</a> </li>
-                </ul>
-              </div>
-              <div class="megamenuitems">
-                <h1>Tablets, laptops & dongles</h1>
-                <ul>
-                  <li> <a href="#"> Tablets</a> </li>
-                  <li> <a href="#"> Apple iPad</a> </li>
-                  <li> <a href="#"> Android tablets</a> </li>
-                  <li> <a href="#">Laptops</a> </li>
-                  <li> <a href="#"> Dongles and mobile wifi</a> </li>
-                </ul>
-              </div>
-              <div class="megamenuitems">
-                <h1>Sims and tariffs</h1>
-                <ul>
-                  <li> <a href="#"> Pay Monthly sims</a> </li>
-                  <li> <a href="#"> Pay As You Go sims</a> </li>
-                  <li> <a href="#"> Tariffs</a> </li>
-                  <li> <a href="#">International</a> </li>
-                  <li> <a href="#"> Top-up</a> </li>
-                </ul>
-              </div>
-              <div class="megamenuitems">
-                <h1> Accessories and more</h1>
-                <ul>
-                  <li> <a href="#">Tech and accessories</a> </li>
-                  <li> <a href="#"> Apple Watch</a> </li>
-                  <li> <a href="#">Apple iPhone</a> </li>
-                  <li> <a href="#"> Smartwatches</a> </li>
-                  <li> <a href="#">Samsung Galaxy Z Fold4 x</a> </li>
-                  <li> <a href="#"></a> Great deals </li>
-                  <li> <a href="#"></a>
-                    Coming soon </li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class=" navbar-brand " aria-current="page" href="#">Why O2</a>
-          </li>
-          <li class="nav-item">
-            <a class="navbar-brand " aria-current="page" href="#">Help</a>
-          </li>
-          <li class="nav-item">
-            <a class="navbar-brand " aria-current="page" href="#">My O2</a>
-          </li>
-          <li class="nav-item">
-            <a class="navbar-brand  bi bi-basket3" aria-current="page" href="#"> <svg xmlns="http://www.w3.org/2000/svg"
-                width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                <path
-                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-              </svg>Search </a>
-          </li>
-          <li class="nav-item">
-            <a class="navbar-brand " aria-current="page" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                height="16" fill="currentColor" class="bi bi-basket3" viewBox="0 0 16 16">
-                <path
-                  d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM3.394 15l-1.48-6h-.97l1.525 6.426a.75.75 0 0 0 .729.574h9.606a.75.75 0 0 0 .73-.574L15.056 9h-.972l-1.479 6h-9.21z" />
-              </svg></a>
-          </li>
 
 
-
-        </ul>
-
-        </form>
-      </div>
-    </div>
-  </nav>
-  <!-- alert with close button -->
-  <div class="alert alert-warning alert-dismissible fade show" role="alert">
-    Want to chat before you buy? Call us from 8am to 8pm on 0808 002 0202.
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-
-  <div class="fixed-bottom"><button type="button" class="btn btn-light feedbackBtn">Feedback</button></div>
+       
+        <!-- <div class="custom-shape-divider-bottom-1661690327">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+              <path d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z" class="shape-fill"></path>
+            </svg> -->
 
 
+            <!-- footer content -->
+<Footer class="footer">
+<div class="footerStrip">
+  <div class="footerStripContent">
 
-  <div class="imgDiv">
-    <img src="./images/backg.jpg" width="100%" height="500px" alt="" />
-    <div class="imgContent1">
-      Discover <br />
-      O2 Switch Up
-    </div>
-    <div class="imgContent2">
-      Switch to a new phone, whenever <br /> you like, with
-      no extra charges <br>
-
-      <button type="button" class="btn btn-light btn-outline-primary">Learn more</button>
-
-
-    </div>
-    <div class="custom-shape-divider-bottom-1661161516">
-      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z" class="shape-fill"></path>
-      </svg>
+    If you need help accessing our services, check out our <a href="#"> Access for all services</a>  to find the ways we can offer support.
   </div>
-  </div>
+</div>
+<Div class="footerImg">
+  <img src="./images/images.jpg" alt="" width="100%" height="500px>
+</Div>
 
-  <div class="imgSecond">
-    <img src="./images/csm_EDIT9495_7928adc06e.jpg" alt="" width="100%">
-    <div class="imgContent3">
-      Meet the new <br>
-      Galaxy.
+<div class="footerContent">
+  <Div class="row footerRow">
+    <div class="col">
+      <ul class="listType">
+        <li><span class="material-icons">
+          store
+          </span><a href="#">Find a store</a></li>
+        <li><span class="material-icons">
+          podcasts
+          </span><a href="#">Check our network</a></li>
+        <li><span class="material-icons">
+          person
+          </span><a href="#">Sign in to My O2</a></li>
+        <li><span class="material-icons">
+          shopping_cart
+          </span><a href="#">Track my order</a></li>
+        <li><span class="material-icons">
+          search
+          </span><a href="#">Search</a></li>
+      </ul>
     </div>
-    
-    <div class="imgContent4">
-      Sava up to $620 when you pre-order on an <br>
-      Unlimited tariff and trade in a Galaxy device.
-      <br>
-      <button type="button" class="btn btn-light btn-outline-primary bg-primary preOrder "> Pre-order now</button>
+    <div class="col">
+      <ul class="listType">
+        <li><a href="#">Popular in shop</a></li>
+        <li><a href="#">iPhone 13</a></li>
+        <li><a href="#">iPhone 13 Pro</a></li>
+        <li><a href="#">iPhone 13 Pro Max</a></li>
+        <li><a href="#">New iPhone SE</a></li>
+        <li><a href="#">Apple Watch Series 7</a></li>
+        <li><a href="#">Samsung Galaxy S22</a></li>
+        <li><a href="#">Samsung Galaxy S22 Ultra</a></li>
+        <li><a href="#">Samsung Galaxy Z Fold4</a></li>
+        <li><a href="#">Samsung Galaxy Z Flip4</a></li>
+        <li><a href="#">Samsung Galaxy A32 5G</a></li>
+        <li><a href="#">Virgin Media broadband deals</a></li>
+      </ul>
     </div>
-    
-    
-    
+    <div class="col">
+      <ul class="listType">
+        <li><a href="#">Help and support</a></li>
+        <li><a href="#">Help home</a></li>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">My O2</a></li>
+        <li><a href="#">Collection and delivery</a></li>
+        <li><a href="#"></a>Shop<b></b></li>
+        <li><a href="#">Phones</a></li>
+        <li><a href="#">Tablets</a></li>
+        <li><a href="#">Pay Monthly Sim</a></li>
+        <li><a href="#">Pay As You Go Sim</a></li>
+        <li><a href="#">Virgin Media O2 Joint Venture</a></li>
+      </ul>
+
+
+    </div>
+
+  </Div>
+</div>
+
+  <div class="disclaimer">
+   <ul class="disclaimerOne">
+    <li>About O2</li>
+    <li>Our Blueprint</li>
+    <li>Careers</li>
+    <li>News & PR</li>
+    <li>Sponsorship</li>
+    <li>Virgin Media and O2</li>
+  </ul>
+  <ul class="disclaimerTwo">
+    <li>Access for all</li>
+    <li>Terms & Conditions</li>
+    <li>Privacy Policy</li>
+    <li>Cookie Policy</li>
+    <li>Modern Slavery Statement</li>
+  </ul>
+
+  <ul class="disclaimerThree">
+    <li>© 2022 Telefónica UK Limited</li>
+  </ul>
+
+  <ul class="disclaimerFour">
+    <li>In relation to consumer credit, Telefónica UK Limited is authorised and regulated by the Financial Conduct Authority (Reference Number 718822)</li>
+  </ul>
   </div>
-  
-  
-  
-  
-  
-  
-  
-  
-  
+</Footer>
 
 
 
@@ -411,33 +623,21 @@ visibility: hidden;
 
 
 
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <!-- Optional JavaScript; choose one of the two! -->
 
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- Optional JavaScript; choose one of the two! -->
-
-  <!-- Option 1: Bootstrap Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
-
-  <!-- Option 2: Separate Popper and Bootstrap JS -->
-  <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     -->
-</body>
-
+  </body>
 </html>
